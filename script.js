@@ -19,7 +19,7 @@ function displayHiddenWord(hiddenWord) {
 
 function gameOver() {
    if(numberOfLives == 0) {
-      result.textContent = "Désolé vous avez perdu le mot était" + randomWord;
+      result.textContent = "Désolé vous avez perdu le mot était " + randomWord;
       keyboard.style.pointerEvents = "none";
       anwserButton.style.pointerEvents = "none";
    }
