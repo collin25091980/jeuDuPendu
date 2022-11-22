@@ -93,6 +93,14 @@ kbd.key {
    transform: scale(1.5);
 }
 
+.answerWithAWord button {
+   border: none;
+   color: #FFF;
+   background: darkgrey;
+   cursor: pointer;
+   border-radius: 3px;
+}
+
 @media screen and (max-width: 999px) {
    .container {
       width: 100%;
