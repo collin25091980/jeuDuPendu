@@ -46,7 +46,7 @@ function checkLetter(e) {
       else {
          e.target.classList.add('badLetter');
          numberOfLives--;
-         console.log(numberOfLives);
+         // console.log(numberOfLives);
          e.target.style.pointerEvents = "none";
          hangmanImg.style.display = "block";
          hangmanImg.src = "assets/images/pendu-" + numberOfLives + ".png";
@@ -58,7 +58,7 @@ function checkLetter(e) {
 
 function checkWord(e) {
    e.preventDefault();
-   console.log(answerWord.value.toUpperCase());
+   // console.log(answerWord.value.toUpperCase());
    if(answerWord.value.toUpperCase() != randomWord) {
       numberOfLives--;
       result.textContent = "Il vous reste " + numberOfLives + " pour trouver le mot caché";
@@ -90,7 +90,7 @@ let answerWord = document.querySelector('.answerWithAWord input');
 // Excecution
 
 generateRandomWord(wordList);
-console.log(randomWord);
+// console.log(randomWord);
 generateHiddenWord(randomWord);
 displayHiddenWord(hiddenWord);
 for(let kbdKey of kbdKeys) {
