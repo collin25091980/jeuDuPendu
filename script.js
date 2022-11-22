@@ -67,6 +67,7 @@ function checkWord(e) {
       result.textContent = "Il vous reste " + numberOfLives + " " + (numberOfLives>1 ? "vies" : "vie") + " pour trouver le mot caché";
       hangmanImg.style.display = "block";
       hangmanImg.src = "assets/images/pendu-" + numberOfLives + ".png";
+      badChoiceEffect();
    }
    else {
       let findedWord = answerWord.value.toUpperCase();
