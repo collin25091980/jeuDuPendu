@@ -1,0 +1,99 @@
+* {
+   box-sizing: border-box;
+}
+
+html {
+   height: 100%;
+}
+
+body {
+   margin: 0;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   font-family: Arial;
+}
+
+
+p, button, input {
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   font-size: 1em;
+}
+
+h1 {
+   text-align: center;
+}
+
+kbd {
+   cursor: pointer;
+}
+
+kbd.key {
+   font-size: 3em;
+   border-radius: 3px;
+   padding: 5px 5px 0;
+   margin-top: 15px;
+   border: 1px solid black;
+   color: #FFF;
+   background: darkgrey;
+}
+
+.keyboard p:first-of-type {
+   padding-bottom: 30px;
+}
+
+#wordToFind {
+   text-align: center;
+   font-size: 2em;
+   letter-spacing: 0.5em;
+}
+
+.container {
+   width: 1000px;
+   margin: 0 auto;
+}
+
+.result {
+   height: 50px;
+}
+
+.hangman {
+   margin: 0 auto;
+   height: 200px;
+   width: 200px;
+}
+
+.keyboard {
+   align-self: flex-end;
+}
+
+.goodLetter {
+   background: lightgreen !important;
+}
+
+.badLetter {
+   background: lightcoral !important;
+}
+
+.answerWithAWord {
+   margin-top: 50px;
+   justify-content: center;
+   text-align: center;
+   display: flex;
+   flex-direction: row;
+   transform: scale(1.5);
+}
+
+
+
+@media screen and (max-width: 768px) {
+   .container {
+      width: 100%;
+   }
+
+   kbd.key {
+      font-size: 2em;
+   }
+}
