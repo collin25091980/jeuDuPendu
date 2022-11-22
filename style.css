@@ -111,6 +111,10 @@ kbd.key {
    kbd.key {
       font-size: 1.5em;
    }
+
+   .answerWithAWord {
+      transform: scale(1);
+   }
 }
 
 @media screen and (max-width: 375px) {
@@ -125,5 +129,9 @@ kbd.key {
    #wordToFind {
       font-size: 1em;
       letter-spacing: 0.25em;
+   }
+
+   .answerWithAWord {
+      transform: scale(0.9);
    }
 }
