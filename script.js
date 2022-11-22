@@ -24,6 +24,9 @@ function gameOver() {
       anwserButton.style.pointerEvents = "none";
    }
    if(wordToFind.textContent == randomWord || answerWord.value.toUpperCase() == randomWord) {
+      if(answerWord.value.toUpperCase() == randomWord) {
+         wordToFind.textContent = answerWord.value.toUpperCase();
+      }
       result.textContent = "Bravo vous avez gagné";
       keyboard.style.pointerEvents = "none";
       anwserButton.style.pointerEvents = "none";
