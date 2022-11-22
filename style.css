@@ -38,6 +38,7 @@ kbd.key {
    border: 1px solid black;
    color: #FFF;
    background: darkgrey;
+   cursor: pointer;
 }
 
 .keyboard p:first-of-type {
