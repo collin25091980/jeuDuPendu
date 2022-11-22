@@ -44,6 +44,11 @@ kbd.key {
    padding-bottom: 30px;
 }
 
+.word {
+   display: flex;
+   flex-wrap: wrap;
+}
+
 #wordToFind {
    text-align: center;
    font-size: 2em;
