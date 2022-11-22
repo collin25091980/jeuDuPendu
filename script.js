@@ -22,11 +22,13 @@ function gameOver() {
       result.textContent = "Désolé vous avez perdu le mot était " + randomWord;
       keyboard.style.pointerEvents = "none";
       anwserButton.style.pointerEvents = "none";
+      losingGameEffect();
    }
    if(wordToFind.textContent == randomWord) {
       result.textContent = "Bravo vous avez gagné";
       keyboard.style.pointerEvents = "none";
       anwserButton.style.pointerEvents = "none";
+      victoryGameEffect()
    }
 }
 
@@ -37,11 +39,11 @@ function checkLetter(e) {
             hiddenWord[i] = randomWord[i];
             goodLetter = true;
          }
-         
       }
       if(goodLetter) {
          e.target.classList.add('goodLetter');
          e.target.style.pointerEvents = "none";
+         goodChoiceEffect();
       }
       else {
          e.target.classList.add('badLetter');
@@ -50,6 +52,7 @@ function checkLetter(e) {
          e.target.style.pointerEvents = "none";
          hangmanImg.style.display = "block";
          hangmanImg.src = "assets/images/pendu-" + numberOfLives + ".png";
+         badChoiceEffect();
       }
       displayHiddenWord(hiddenWord);
       result.textContent = "Il vous reste " + numberOfLives + " " + (numberOfLives>1 ? "vies" : "vie") + " pour trouver le mot caché";
@@ -73,6 +76,30 @@ function checkWord(e) {
    }
    answerWord.value = '';
    gameOver();
+}
+
+function goodChoiceEffect() {
+   let goodChoice = new Audio()
+   goodChoice.src = "assets/sounds/goodChoice.mp3";
+   goodChoice.play();
+}
+
+function badChoiceEffect() {
+   let badChoice = new Audio()
+   badChoice.src = "assets/sounds/badChoice.mp3";
+   badChoice.play();
+}
+
+function losingGameEffect() {
+   let losingGame = new Audio()
+   losingGame.src = "assets/sounds/losingGame.mp3";
+   losingGame.play();
+}
+
+function victoryGameEffect() {
+   let victoryGame = new Audio()
+   victoryGame.src = "assets/sounds/victoryGame.mp3";
+   victoryGame.play();
 }
 
 
