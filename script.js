@@ -52,7 +52,7 @@ function checkLetter(e) {
          hangmanImg.src = "assets/images/pendu-" + numberOfLives + ".png";
       }
       displayHiddenWord(hiddenWord);
-      result.textContent = "Il vous reste " + numberOfLives + " vies pour trouver le mot caché";
+      result.textContent = "Il vous reste " + numberOfLives + " " + (numberOfLives>1 ? "vies" : "vie") + " pour trouver le mot caché";
       gameOver();
 }
 
@@ -61,7 +61,7 @@ function checkWord(e) {
    // console.log(answerWord.value.toUpperCase());
    if(answerWord.value.toUpperCase() != randomWord) {
       numberOfLives--;
-      result.textContent = "Il vous reste " + numberOfLives + " vies pour trouver le mot caché";
+      result.textContent = "Il vous reste " + numberOfLives + " " + (numberOfLives>1 ? "vies" : "vie") + " pour trouver le mot caché";
       hangmanImg.style.display = "block";
       hangmanImg.src = "assets/images/pendu-" + numberOfLives + ".png";
    }
