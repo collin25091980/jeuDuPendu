@@ -90,10 +90,10 @@ kbd.key {
 
 @media screen and (max-width: 768px) {
    .container {
-      width: 95%;
+      width: 90%;
    }
 
    kbd.key {
-      font-size: 2em;
+      font-size: 1.5em;
    }
 }
