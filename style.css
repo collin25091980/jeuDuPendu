@@ -92,14 +92,38 @@ kbd.key {
    transform: scale(1.5);
 }
 
-
+@media screen and (max-width: 999px) {
+   .container {
+      width: 100%;
+   }
+}
 
 @media screen and (max-width: 768px) {
+   .container {
+      width: 80%;
+   }
+
+   #wordToFind {
+      font-size: 1.5em;
+      letter-spacing: 0.25em;
+   }
+
+   kbd.key {
+      font-size: 1.5em;
+   }
+}
+
+@media screen and (max-width: 375px) {
    .container {
       width: 90%;
    }
 
    kbd.key {
-      font-size: 1.5em;
+      font-size: 0.8em;
+   }
+
+   #wordToFind {
+      font-size: 1em;
+      letter-spacing: 0.25em;
    }
 }

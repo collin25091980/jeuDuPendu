@@ -23,10 +23,7 @@ function gameOver() {
       keyboard.style.pointerEvents = "none";
       anwserButton.style.pointerEvents = "none";
    }
-   if(wordToFind.textContent == randomWord || answerWord.value.toUpperCase() == randomWord) {
-      if(answerWord.value.toUpperCase() == randomWord) {
-         wordToFind.textContent = answerWord.value.toUpperCase();
-      }
+   if(wordToFind.textContent == randomWord) {
       result.textContent = "Bravo vous avez gagné";
       keyboard.style.pointerEvents = "none";
       anwserButton.style.pointerEvents = "none";
@@ -67,6 +64,12 @@ function checkWord(e) {
       result.textContent = "Il vous reste " + numberOfLives + " pour trouver le mot caché";
       hangmanImg.style.display = "block";
       hangmanImg.src = "assets/images/pendu-" + numberOfLives + ".png";
+   }
+   else {
+      let findedWord = answerWord.value.toUpperCase();
+      // console.log(findedWord);
+      wordToFind.textContent = findedWord;
+      result.textContent = "Bravo vous avez gagné !";
    }
    answerWord.value = '';
    gameOver();
